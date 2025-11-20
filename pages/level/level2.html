@@ -53,6 +53,7 @@
 
         if (status.status == "completed") {
             $("#level-title").text("level"+level_game)
+            $("#answerContainer").empty()
 
             for (let i = 0; i < word.length; i++) {
                 $("#answerContainer").append(`<div class="slot" >${word[i]}</div>`);

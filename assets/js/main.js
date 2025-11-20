@@ -112,7 +112,7 @@ function checkAnswer() {
                 let j=lev.findIndex(item=>item.level===next_level)
                 lev[i].status="completed";
                 console.log(j)
-                if(j){
+                if(j>0){
                     lev[j].status="unlocked"
                 }
                 localStorage.setItem("level",JSON.stringify(lev))

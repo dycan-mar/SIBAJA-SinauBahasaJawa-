@@ -129,6 +129,12 @@
 </div>
 
 <script>
+  function goToLevel(params){
+    backsound.pause()
+    backsoundLevel.play()
+    sound=false
+    loadPage("level/level"+params+".html")
+  }
   setInterval(() => {
     let levels = JSON.parse(localStorage.getItem("level"))
     $("#level").empty();
@@ -136,7 +142,7 @@
     levels.map(lev => {
       $("#level").append(`
       <div class="level ${lev.status === "locked" ? "locked" : ""}"
-      ${lev.status === "locked" ? "" : `onclick="loadPage('level/level${lev.level}.html')"`}>
+      ${lev.status === "locked" ? "" : `onclick="goToLevel('${lev.level}')"`}>
       ${lev.level}
       </div>
       `);
