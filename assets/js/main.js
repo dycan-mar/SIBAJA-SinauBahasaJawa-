@@ -71,7 +71,7 @@ function initDragDrop() {
             
             draggedLetter.removeClass("selected");
             draggedLetter.hide()
-            console.log(draggedLetter)
+            // console.log(draggedLetter)
             draggedLetter = null;
         }
 
@@ -106,18 +106,18 @@ function checkAnswer() {
                 $("#nextLevel").show()
                 let lev=JSON.parse(localStorage.getItem("level"))
                 let i=lev.findIndex(item=>item.level===level)
-                console.log(level)
+                // console.log(level)
                 let next_level=level+1
-                console.log("next level"+next_level)
+                // console.log("next level"+next_level)
                 let j=lev.findIndex(item=>item.level===next_level)
                 lev[i].status="completed";
-                console.log(j)
+                // console.log(j)
                 if(j>0){
                     lev[j].status="unlocked"
                 }
                 localStorage.setItem("level",JSON.stringify(lev))
 
-                console.log(JSON.parse(localStorage.getItem("level")))
+                // console.log(JSON.parse(localStorage.getItem("level")))
 
             });
         } else {
