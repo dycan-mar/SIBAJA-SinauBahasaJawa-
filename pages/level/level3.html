@@ -1,0 +1,66 @@
+<div>
+    <link rel="stylesheet" href="assets/css/level.css">
+
+    <div id="gameWrapper" class="pt-5">
+
+        <div id="level-title"></div>
+        <div class="text-wrap fs-5" id="pertanyaan"></div>
+
+        <!-- Kontainer huruf acak -->
+        <div id="shuffledContainer"></div>
+
+        <!-- Kontainer jawaban -->
+        <div id="answerContainer"></div>
+        <div>
+            <span>penjelasan singkat: </span>
+            <p class="text-break fs-5 my-2" id="deskripsi"></p>
+        </div>
+
+        <div class="d-md-flex justify-content-center align-items-center gap-3">
+            <div class=" d-flex justify-content-center mb-2">
+                <button class="btn btn-sm btn-primary px-5 fs-6 me-2" onclick="loadPage('level.html')">Kembali</button>
+            </div>
+            <div class=" d-flex justify-content-center mb-2">
+                <button class="btn btn-sm btn-primary px-5 fs-6 me-2" id="ulang">Ulangi</button>
+            </div>
+            <div class=" d-flex justify-content-center mb-2">
+                <button class="btn btn-sm btn-primary px-x fs-6" id="nextLevel">Level Berikutnya</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        var level_game = 3;
+        const word = "KAGUNGAN";
+        const pertanyaan = "Tembung NDUE krama aluse..";
+        const penjelasan = "Tembung kagungan biasane digawe yen ngomong kalih tiang kang luwih sepuh ";
+        const status = JSON.parse(localStorage.getItem("level")).find(item => item.level == level_game)
+        let draggedIndex = null;
+        $("#nextLevel").hide()
+        $("#pertanyaan").text(pertanyaan)
+        $("#ulang").on("click", function () {
+            initGame(word, level_game, penjelasan)
+        })
+        $("#nextLevel").on("click", function () {
+            loadPage(`level/commingSoon.html`)
+        })
+
+        if (status.status == "completed") {
+            $("#level-title").text("level " + level_game)
+
+            for (let i = 0; i < word.length; i++) {
+                $("#answerContainer").append(`<div class="slot" >${word[i]}</div>`);
+            }
+            $("#deskripsi").text(deskripsi)
+            $("#nextLevel").show()
+        } else if (status.status == "unlocked") {
+            initGame(word, level_game, penjelasan)
+        } else {
+            // console.log(status)
+            loadPage("level.html")
+        }
+
+
+    </script>
+</div>

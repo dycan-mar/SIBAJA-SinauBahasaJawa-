@@ -1,0 +1,33 @@
+:root {
+    --bg1: #f7e9d7;
+    /* parchment */
+    --accent: #7b3f00;
+    /* dark brown */
+    --muted: #a67c52;
+    --card: #fffdf8;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+        "Noto Sans", sans-serif;
+    background: var(--bg1);
+    color: var(--accent);
+}
+
+/* subtle batik-like pattern */
+body {
+    height: 100%;
+    background-image: radial-gradient(circle at 10% 20%,
+            rgba(123, 63, 0, 0.06) 0 2px,
+            transparent 3px),
+        repeating-linear-gradient(45deg,
+            rgba(123, 63, 0, 0.03) 0 20px,
+            transparent 20px 40px);
+    background-size: cover;
+
+    box-sizing: border-box;
+}

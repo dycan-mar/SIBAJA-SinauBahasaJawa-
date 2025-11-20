@@ -1,0 +1,17 @@
+<div id="index" class=" align-content-center" style="height: 100%;">
+    <div class="container d-flex justify-content-center">
+        <div>
+            <img class="img mb-3" src="assets/img/judulHD.png" alt="">
+            <div class="d-flex mt-3 justify-content-center align-content-center ">
+                <button class="d-block jawa-button" id="btnOpen">Click To Start</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#btnOpen").on("click", function () {
+        backsound.play()
+        sound=true
+        loadPage("home.html")
+    });
+</script>

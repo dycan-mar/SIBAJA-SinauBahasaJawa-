@@ -1,0 +1,95 @@
+/*============= primary ==========*/
+.btn-primary {
+    background: linear-gradient(145deg, #a7773d, #693500);
+    color: #fff; /* Warna teks Cokelat Tua agar kontras */
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.5), /* Shadow dasar */
+        inset 0 0 10px rgba(255, 255, 255, 0.4), /* Kilau bagian dalam untuk efek emas */
+        0 0 0 3px #693500; /* Border tipis warna Emas lebih gelap */
+    transition: all 0.2s ease;
+    border-color: #693500 !important;
+    font-family: 'Times New Roman', serif; /* Font yang klasik/serius */
+    font-weight: bold;
+}
+
+/* Hover */
+.btn-primary:hover {
+    background: linear-gradient(145deg, #c4995c, #e0bb7d); /* Emas lebih terang saat hover */
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.6), 
+        inset 0 0 15px rgba(255, 255, 255, 0.6),
+        0 0 0 4px #a7773d;
+    transform: translateY(-2px);
+}
+
+/* Ketika ditekan (active) */
+.btn-primary:active,
+.btn-primary.active,
+.show>.btn-primary.dropdown-toggle {
+    background: linear-gradient(145deg, #8b6038, #a7773d); /* Kembali ke warna gelap */
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.5), 
+        inset 0 0 10px rgba(0, 0, 0, 0.6); /* Efek tombol tertekan */
+    transform: translateY(0);
+}
+
+/* Focus ring */
+.btn-primary:focus,
+.btn-primary:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(123, 63, 0, 0.4) !important;
+}
+
+/* Disabled */
+.btn-primary:disabled,
+.btn-primary.disabled {
+    background-color: #a36a2b !important;
+    border-color: #8b561c !important;
+}
+
+
+/*============ secondary =============*/
+.btn-secondary {
+    background-color: transparent !important;
+    color: #522900;
+    border: none !important;
+    font-family: 'Times New Roman', serif; /* Font yang klasik/serius */
+    font-weight: bold;
+}
+
+/* Hover */
+.btn-secondary:hover {
+    background-color: #693500 !important;
+    border-color: #522900 !important;
+}
+
+/* Ketika ditekan (active) */
+.btn-secondary:active,
+.btn-secondary.active,
+.show>.btn-secondary.dropdown-toggle {
+    background-color: #522900 !important;
+    border-color: #3d1f00 !important;
+}
+
+/* Focus ring */
+.btn-secondary:focus,
+.btn-secondary:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(123, 63, 0, 0.4) !important;
+}
+
+/* Disabled */
+.btn-secondary:disabled,
+.btn-secondary.disabled {
+    background-color: #a36a2b !important;
+    border-color: #8b561c !important;
+}
+
+
+/*=========== ghost ============*/
+.btn-ghost {
+    background: transparent;
+    color: var(--muted);
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+}
+
