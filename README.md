@@ -1,5 +1,5 @@
 SIBAJA — Sinau Bahasa Jawa
-Belajar bahasa Jawa dan Indonesia dengan cara menyenangkan lewat permainan menyusun huruf
+Belajar bahasa Jawa dengan cara menyenangkan lewat permainan menyusun huruf
 
 Deskripsi Singkat
 SIBAJA adalah aplikasi web edukasi sederhana yang saya buat untuk membantu anak-anak (atau siapa saja) belajar bahasa Jawa dengan cara menyusun huruf menjadi kata yang benar.
